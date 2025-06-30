@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="profileApp" ng-controller="MainCtrl" onclick="mainMusic.play()">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Karama Panigoro">
+  <meta name="description" content="Together We Are">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="/icon.png">
+  <title>Zero One</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <audio id="mainMusic" autoplay loop>
+    <source src="/main.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="center-wrapper">
+    <button class="gallery-btn" ng-click="openGallery()">📷</button>
+    <div class="profile-wrapper">
+      <div class="profile-border"></div>
+      <img src="/112-144-k17-f19.jpeg" alt="Profile" class="profile-pic"/>
+    </div>
+    <div class="name" ng-click="showMessage()">Zero-One</div>
+    <div class="typing-message" ng-class="{'show': messageVisible}">{{message}}</div>
+    <div class="dropdown">
+      <button class="dropdown-btn" ng-click="toggleDropdown()">Zero-One</button>
+      <div class="dropdown-content" ng-class="{'show': dropdownOpen}">
+        <a href="/f19.html" class="dropdown-item"><span>F_19</span></a>
+        <a href="/112.html" class="dropdown-item"><span>112</span></a>
+        <a href="/k17.html" class="dropdown-item"><span>↑K_17</span></a>
+        <a href="/144.html" class="dropdown-item"><span>144</span></a>
+        <a href="/f27.html" class="dropdown-item"><span>F_27</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-popup" ng-class="{'show': gamePopupVisible}">
+    <div class="popup-content">
+      <div>{{gameTitle}}</div>
+      <div>{{gameId}}</div>
+      <div>{{gameUsername}}</div>
+    </div>
+  </div>
+
+  <div class="gallery-overlay" ng-class="{'show': galleryOpen}">
+    <div class="gallery-close" ng-click="closeGallery()">→</div>
+    <img ng-src="{{currentGalleryImage}}" class="gallery-image" ng-class="{'fade': galleryFading}">
+  </div>
+</body>
+</html>

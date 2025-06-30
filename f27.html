@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="profileApp" ng-controller="MainCtrl" onclick="document.getElementById('f27').play()">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Karama Panigoro">
+  <meta name="description" content="Member F27 Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="/icon.png">
+  <title>Firdaus Figo Topaju</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <audio id="f27" autoplay loop>
+    <source src="/f27.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="center-wrapper">
+    <a href="index.html" class="close-btn">←</a>
+    <div class="profile-wrapper">
+      <div class="profile-border"></div>
+      <img src="/f27.png" alt="F27" class="profile-pic"/>
+    </div>
+    <div class="name" ng-click="showMessage()">Figo</div>
+    <div class="typing-message" ng-class="{'show':
+    messageVisible}">Everything still abt U</div>
+
+    <div class="social-section">
+      <div class="section-title">Sosmed</div>
+      <div class="socials">
+        <a href="https://tiktok.com/@f27" target="_blank"><img
+        src="/logoTT.png"></a>
+        <a href="https://+6289521182859" target="_blank"><img
+        src="/logoWA.png"></a>
+        <a href="https://instagram.com/f27" target="_blank"><img
+        src="/logoIG.png"></a>
+      </div>
+
+      <div class="section-title">Game</div>
+      <div class="socials">
+        <img ng-click="showGameInfo(members[4], 'ff')"
+        src="/logoFF.png">
+        <img ng-click="showGameInfo(members[4], 'ml')"
+        src="/logoML.png">
+        <img ng-click="showGameInfo(members[4], 'mc')"
+        src="/logoMC.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="game-popup" ng-class="{'show': gamePopupVisible}">
+    <div class="popup-content">
+      <div>{{gameTitle}}</div>
+      <div>{{gameId}}</div>
+      <div>{{gameUsername}}</div>
+    </div>
+  </div>
+</body>
+</html>
