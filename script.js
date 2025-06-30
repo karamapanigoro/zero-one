@@ -83,16 +83,16 @@ angular.module('profileApp', [])
   };
 
   $scope.galleryImages = [
-    '/slide1.png',
-    '/slide2.png',
-    '/slide3.png',
-    '/slide4.png',
-    '/slide5.png',
-    '/slide6.png',
-    '/slide7.png',
-    '/slide8.png',
-    '/slide9.png',
-    '/slide10.png'
+    'slide1.png',
+    'slide2.png',
+    'slide3.png',
+    'slide4.png',
+    'slide5.png',
+    'slide6.png',
+    'slide7.png',
+    'slide8.png',
+    'slide9.png',
+    'slide10.png'
   ];
   $scope.galleryOpen = false;
   $scope.currentGalleryImage = '';
