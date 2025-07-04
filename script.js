@@ -79,7 +79,7 @@ angular.module('profileApp', [])
     $scope.gamePopupVisible = true;
     $timeout(function() {
       $scope.gamePopupVisible = false;
-    }, 3500);
+    }, 4000);
   };
 
   $scope.galleryImages = [
@@ -114,8 +114,8 @@ angular.module('profileApp', [])
           $scope.currentGalleryImage = $scope.galleryImages[galleryIndex];
           $scope.galleryFading = true;
         });
-      }, 500);
-    }, 3000);
+      }, 100);
+    }, 5000);
   };
 
   $scope.closeGallery = function() {
